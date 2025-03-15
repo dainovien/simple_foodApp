@@ -15,11 +15,14 @@ class _LoginPageState extends State<LoginPage> {
   final String correctPassword = "fulan";
 
   void _login() {
-    if (usernameController.text == correctUsername && passwordController.text == correctPassword) {
+    if (usernameController.text == correctUsername &&
+        passwordController.text == correctPassword) {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => HomePage(username: usernameController.text), // Kirim username
+          builder:
+              (context) =>
+                  HomePage(username: usernameController.text), // Kirim username
         ),
       );
     } else {
@@ -28,7 +31,6 @@ class _LoginPageState extends State<LoginPage> {
       );
     }
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +43,11 @@ class _LoginPageState extends State<LoginPage> {
             children: [
               const Text(
                 "FoodApp",
-                style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: Colors.red),
+                style: TextStyle(
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
+                ),
               ),
               const SizedBox(height: 20),
               TextField(

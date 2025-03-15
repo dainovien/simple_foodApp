@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../models/food_item.dart';
-import '../pages/order_page.dart';
+import 'package:foodapp_dainovien/models/food_item.dart';
+import 'package:foodapp_dainovien/pages/order_page.dart';
 
 class FoodCard extends StatelessWidget {
   final Food food;
@@ -10,9 +10,7 @@ class FoodCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

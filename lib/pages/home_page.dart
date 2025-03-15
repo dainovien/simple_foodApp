@@ -65,13 +65,18 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Image.asset(food.image, height: 80),
-                      Text(food.name, style: const TextStyle(fontWeight: FontWeight.bold)),
+                      Text(
+                        food.name,
+                        style: const TextStyle(fontWeight: FontWeight.bold),
+                      ),
                       Text("Rp${food.price}"),
                       ElevatedButton(
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => OrderPage(food: food)),
+                            MaterialPageRoute(
+                              builder: (context) => OrderPage(food: food),
+                            ),
                           );
                         },
                         style: ElevatedButton.styleFrom(
@@ -101,8 +106,8 @@ class Food {
 }
 
 final List<Food> foodMenu = [
-  Food(name: "Burger", price: 25000, image: "assets/pizza.jpeg"),
+  Food(name: "Burger", price: 25000, image: "assets/burger.jpeg"),
   Food(name: "Pizza", price: 50000, image: "assets/pizza.jpeg"),
-  Food(name: "Sushi", price: 40000, image: "assets/pizza.jpeg"),
-  Food(name: "Steak", price: 60000, image: "assets/pizza.jpeg"),
+  Food(name: "Sushi", price: 40000, image: "assets/sushi.jpeg"),
+  Food(name: "Steak", price: 60000, image: "assets/steak.jpeg"),
 ];
